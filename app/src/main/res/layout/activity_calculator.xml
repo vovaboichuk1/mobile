@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/displayTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            android:gravity="end"
+            android:padding="16dp"
+            android:text="0"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:elevation="2dp" />
+
+        <!-- Digit Buttons -->
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/displayTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="7"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn7"
+            android:layout_below="@id/displayTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="8"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn8"
+            android:layout_below="@id/displayTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="9"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <!-- Buttons for digits 4, 5, 6, 1, 2, 3, 0 -->
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btn7"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="4"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn4"
+            android:layout_below="@id/btn8"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="5"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn5"
+            android:layout_below="@id/btn9"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="6"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btn4"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="1"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn1"
+            android:layout_below="@id/btn5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="2"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toEndOf="@id/btn2"
+            android:layout_below="@id/btn6"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="3"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick" />
+
+        <!-- Operator Buttons -->
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btn1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@android:color/white"
+            android:onClick="onDigitClick"
+            android:text="0"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btn7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-81dp"
+            android:layout_marginEnd="0dp"
+            android:background="@android:color/white"
+            android:onClick="onOperatorClick"
+            android:text="+"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btnPlus"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:text="-"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onOperatorClick" />
+
+        <!-- Buttons for multiplication, division, and equals -->
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btnMinus"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:text="×"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onOperatorClick" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btnMultiply"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:text="÷"
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:onClick="onOperatorClick" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btnDivide"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:text="="
+            android:textSize="24sp"
+            android:background="@android:color/white"
+            android:textColor="#FFFFFF"
+            android:onClick="onEqualsClick" />
+
+        <!-- Clear Button -->
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/btn7"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="315dp"
+            android:background="@android:color/white"
+            android:onClick="onClearClick"
+            android:text="C"
+            android:textSize="24sp" />
+
+</RelativeLayout>
