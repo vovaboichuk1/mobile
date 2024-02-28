@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val myImageView: ImageView = findViewById(R.id.imageAvatar)
         val textV: TextView = findViewById(R.id.textRead)
-        val intent = Intent(this,activity_second::class.java)
+        val intent = Intent(this,SecondActivity::class.java)
         myImageView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 textV.setText("Avatar")
